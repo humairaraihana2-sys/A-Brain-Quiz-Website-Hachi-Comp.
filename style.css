@@ -1,0 +1,342 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #abd9ef; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    color: #1e4291; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.container {
+    background-color: #f0f1f2; 
+    padding: 40px 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    width: 100%; 
+    max-width: 600px; 
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px; 
+    }
+}
+
+h1 {
+    color: #2565aa; 
+    margin-bottom: 20px;
+    font-size: 2.2em; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Kurangi ukuran judul pada ponsel */
+    }
+}
+
+p {
+    /* Gaya untuk paragraf */
+    font-size: 1.1em; /* Ukuran font paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    margin-bottom: 25px; /* Jarak di bawah paragraf */
+}
+
+/* --- Responsivitas untuk p --- */
+@media (max-width: 768px) {
+    p {
+        font-size: 1em; /* Kurangi ukuran paragraf pada tablet */
+    }
+}
+
+/* Gaya untuk tombol umum (Mulai Kuis, Submit Jawaban) */
+.start-button, .submit-button, .cta-button {
+    display: inline-block; /* Membuat tombol seperti elemen blok tapi sejajar */
+    background-color: #28a745; /* Warna latar belakang tombol hijau */
+    color: white; /* Warna teks tombol putih */
+    padding: 12px 25px; /* Padding di dalam tombol */
+    border-radius: 5px; /* Sudut membulat */
+    text-decoration: none; /* Hapus garis bawah pada tautan */
+    font-size: 1.1em; /* Ukuran font tombol */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi saat hover */
+    border: none; /* Hapus border default untuk button */
+    cursor: pointer; /* Ubah kursor menjadi pointer saat di atas tombol */
+    margin-top: 15px; /* Jarak di atas tombol */
+}
+
+/* Warna khusus untuk tombol CTA di landing page */
+.cta-button {
+    background-color: #ff5722; /* Warna tombol yang menarik perhatian */
+    padding: 15px 35px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.start-button:hover, .submit-button:hover {
+    /* Gaya saat tombol di-hover */
+    background-color: #218838; /* Warna hijau yang sedikit lebih gelap saat hover */
+}
+
+.cta-button:hover {
+    background-color: #e64a19; /* Warna sedikit lebih gelap saat hover */
+    transform: translateY(-3px); /* Efek sedikit naik saat hover */
+}
+
+/* --- Responsivitas untuk Tombol --- */
+@media (max-width: 480px) {
+    .start-button, .submit-button, .cta-button {
+        padding: 10px 20px; /* Kurangi padding tombol pada ponsel */
+        font-size: 1em; /* Kurangi ukuran font tombol pada ponsel */
+        width: 100%; /* Tombol penuh lebar pada layar sangat kecil */
+        box-sizing: border-box;
+    }
+    .cta-button {
+        padding: 12px 25px; /* Sesuaikan padding CTA button */
+        font-size: 1.1em; /* Sesuaikan font size CTA button */
+    }
+}
+
+/* --- Gaya Khusus untuk LANDING PAGE --- */
+.container.landing-page {
+    max-width: 900px; /* Lebar maksimal lebih besar untuk layout 2 kolom */
+    display: flex; /* Menggunakan flexbox untuk tata letak vertikal */
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 60vh; /* Minimal tinggi agar tombol tidak terlalu dekat */
+}
+
+.content-section {
+    display: flex; /* Menggunakan flexbox untuk teks dan gambar */
+    align-items: center; /* Pusatkan secara vertikal */
+    gap: 30px; /* Jarak antara teks dan gambar */
+    margin-bottom: 40px; /* Jarak di bawah section konten */
+    flex-wrap: wrap; /* Izinkan wrapping pada layar kecil */
+    justify-content: center; /* Pusatkan item saat wrap */
+}
+
+.text-content {
+    flex: 1; /* Memberikan fleksibilitas pada konten teks */
+    min-width: 300px; /* Lebar minimum sebelum wrap */
+    text-align: left; /* Teks rata kiri */
+}
+
+.text-content h1 {
+    color: #00796b; /* Warna judul yang berbeda */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-content p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.image-content {
+    flex-shrink: 0; /* Cegah gambar menyusut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-maskot {
+    width: 250px; /* Ukuran maskot */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px; /* Sedikit sudut membulat pada gambar */
+    animation: bounceIn 1s ease-out; /* Animasi saat load */
+}
+
+/* Animasi untuk maskot */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --- Responsivitas untuk Landing Page --- */
+@media (max-width: 768px) {
+    .container.landing-page {
+        padding: 30px;
+        min-height: unset; /* Hapus min-height pada mobile */
+    }
+
+    .content-section {
+        flex-direction: column; /* Tumpuk teks dan gambar secara vertikal */
+        text-align: center; /* Pusatkan teks pada mode kolom */
+    }
+
+    .text-content {
+        text-align: center; /* Pusatkan teks */
+        min-width: unset;
+        margin-bottom: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2em;
+    }
+
+    .text-content p {
+        font-size: 1em;
+    }
+
+    .landing-maskot {
+        width: 200px; /* Perkecil maskot */
+        margin-bottom: 20px; /* Jarak di bawah maskot */
+    }
+}
+
+@media (max-width: 480px) {
+    .container.landing-page {
+        padding: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 1.8em;
+    }
+
+    .landing-maskot {
+        width: 150px;
+    }
+}
+
+
+/* --- Gaya Khusus untuk HALAMAN KUESIONER (quiz.html) --- */
+.question-block {
+    text-align: left; /* Teks pertanyaan rata kiri */
+    margin-bottom: 30px; /* Jarak antar blok pertanyaan */
+    padding: 15px; /* Padding di dalam blok pertanyaan */
+    border: 1px solid #eee; /* Garis tipis */
+    border-radius: 8px; /* Sudut membulat */
+    background-color: #fdfdfd; /* Latar belakang agak putih */
+}
+
+.question-block p {
+    font-size: 1.1em; /* Ukuran font teks pertanyaan */
+    margin-bottom: 15px; /* Jarak di bawah teks pertanyaan */
+    font-weight: bold; /* Teks pertanyaan menjadi tebal */
+    color: #555; /* Warna teks pertanyaan */
+}
+
+.likert-scale {
+    display: flex; /* Gunakan flexbox untuk tata letak opsi */
+    flex-wrap: wrap; /* Izinkan opsi untuk "wrap" ke baris berikutnya jika tidak muat */
+    justify-content: center; /* Pusatkan opsi secara horizontal */
+    gap: 15px; /* Jarak antar opsi */
+}
+
+.likert-scale label {
+    display: flex; /* Untuk menyelaraskan radio button dan teks label */
+    align-items: center; /* Pusatkan secara vertikal */
+    cursor: pointer; /* Kursor berubah jadi pointer saat di atas label */
+    font-size: 1em; /* Ukuran font opsi */
+    white-space: nowrap; /* Cegah teks opsi pecah baris */
+}
+
+.likert-scale input[type="radio"] {
+    margin-right: 5px; /* Jarak antara radio button dan teks */
+    transform: scale(1.2); /* Sedikit perbesar radio button */
+}
+
+/* --- Responsivitas untuk Skala Likert di Kuis --- */
+@media (max-width: 480px) {
+    .likert-scale {
+        flex-direction: column; /* Tumpuk opsi secara vertikal pada ponsel */
+        align-items: flex-start; /* Rata kiri opsi */
+    }
+    .likert-scale label {
+        margin-right: 0;
+        margin-bottom: 10px; /* Jarak vertikal antar opsi */
+    }
+}
+
+
+/* --- Gaya Khusus untuk HALAMAN HASIL (results.html) --- */
+.result-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.result-section h2 {
+    color: #467ebb;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.result-maskot {
+    width: 180px; /* Ukuran maskot */
+    height: 180px;
+    object-fit: contain; /* Pastikan gambar sesuai dalam bingkai */
+    margin: 20px auto;
+    display: block; /* Agar bisa di-margin auto */
+}
+
+/* --- Responsivitas untuk Maskot di Hasil --- */
+@media (max-width: 480px) {
+    .result-maskot {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.result-message {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.result-description, .result-tips, .result-application {
+    text-align: left; /* Teks deskripsi rata kiri */
+    margin-bottom: 15px;
+    line-height: 1.7; /* Jarak antar baris */
+}
+
+.result-description strong, .result-tips strong, .result-application strong {
+    color: #0056b3; /* Warna lebih gelap untuk label bold */
+}
+
+.result-application ul {
+    list-style-type: disc; /* Gaya bullet point default */
+    margin-left: 20px; /* Indentasi daftar */
+    padding-left: 0; /* Hapus padding default */
+}
+
+.result-application li {
+    margin-bottom: 5px; /* Jarak antar item daftar */
+}
