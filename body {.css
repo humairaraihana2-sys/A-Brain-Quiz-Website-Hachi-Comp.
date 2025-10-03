@@ -33,11 +33,13 @@ body {
     margin-bottom: 40px; 
     flex-wrap: wrap; 
     justify-content: center; 
+} /* <-- Kurung kurawal penutup yang hilang di sini */
 
 .text-content {
     flex: 1; 
     min-width: 300px; 
     text-align: left; 
+} /* <-- Kurung kurawal penutup .text-content ditambahkan di sini untuk pemisahan yang lebih jelas, meskipun opsional jika tidak ada properti lain di dalamnya */
 
 .text-content h1 {
     color: #004179; 
@@ -98,10 +100,14 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 20px; 
+} /* <-- Kurung kurawal penutup yang hilang di sini */
+
 
 .cta-button:hover {
     background-color: #000000; 
+    color: #fff; /* Menambahkan warna teks agar terlihat di hover state */
     transform: translateY(-3px); 
+} /* <-- Kurung kurawal penutup yang hilang di sini */
 
 @media (max-width: 768px) {
     .container.landing-page {

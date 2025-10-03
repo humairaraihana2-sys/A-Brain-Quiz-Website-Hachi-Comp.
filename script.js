@@ -21,23 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "q5"
         },
         {
-            question: "Saya sering memberikan ide-ide kreatif dan inovatif dalam diskusi kelompok.",
+            question: "Kamu lebih sering membuat keputusan yang dipikirkan secara logika dan matang-matang daripada menggunakan intuisi ataupun firasat.",
             name: "q6"
         },
         {
-            question: "Saya merasa percaya diri dalam mengambil keputusan penting, meskipun ada risiko.",
+            question: "Kamu sangat teorganisir.",
             name: "q7"
         },
         {
-            question: "Saya senang berinteraksi dengan orang baru dan memperluas jaringan.",
+            question: "Kamu cenderung lebih menyukai mata pelajaran yang mengharuskan mu untuk berpikir keras dibandingkan mata pelajaran yang biasa saja.",
             name: "q8"
         },
         {
-            question: "Saya mampu memotivasi diri sendiri untuk mencapai target yang tinggi.",
+            question: "Kamu sangat fokus dan teliti pada hal-hal kecil.",
             name: "q9"
         },
         {
-            question: "Saya melihat tantangan sebagai kesempatan untuk berkembang dan belajar hal baru.",
+            question: "Kamu lebih senang tugas yang mengharuskan mu menganalisis data ataupun membuat tabel yang rumit.",
             name: "q10"
         }
     ];
@@ -54,53 +54,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const mascots = {
         // Rentang skor: 10 - 24
         TheThinker: {
-            image: 'images/maskot_pemikir.png',
-            title: "Si Pemikir Analitis",
+            image:'https://i.pinimg.com/736x/77/3b/00/773b00209466398812c60cf0222d939f.jpg',
+            title: "Nana Si Logistik",
             message: "Kamu adalah individu yang sangat analitis dan cermat. Kamu suka memecah masalah menjadi bagian-bagian kecil dan menemukan solusi logis. Kekuatanmu ada pada kemampuan berpikir mendalam dan strategis.",
-            tips: "Terus asah kemampuan analisis dan logika Anda. Jangan ragu untuk mendalami topik yang menarik perhatian Anda. Ingatlah bahwa tidak semua hal bisa dipecahkan dengan logika murni; terkadang intuisi juga diperlukan.",
+            tips: "Terus asah kemampuan analisis dan logika Anda. Jangan ragu untuk mendalami topik yang menarik perhatian Anda. Ingatlah bahwa tidak semua hal bisa dipecahkan dengan logika murni, terkadang intuisi juga diperlukan.",
             online: [
-                "Ikuti forum diskusi atau komunitas online yang berfokus pada pemecahan masalah atau topik teknis.",
+                "Ikuti forum diskusi atau komunitas online yang berfokus pada pemecahan masalah atau topik teknis, dan dengan aktif berpartisipasi dan menyalurkan ide serta mengembangkan kemampuan diri.",
                 "Manfaatkan platform kursus online (Coursera, edX) untuk belajar lebih dalam tentang data science, pemrograman, atau filsafat.",
-                "Berpartisipasi dalam tantangan coding atau puzzle online untuk melatih otak Anda."
+                "Membuat konten edukasi yang dapat membantu kemampuan nalar dan analisis mu. "
             ],
             realLife: [
-                "Luangkan waktu untuk refleksi dan journaling untuk memproses pikiran Anda.",
+                "Mengikuti komunitas di sekitarmuyang memfokuskan kamu untuk mengembangkan nalar kritismu",
                 "Coba pecahkan masalah sehari-hari dengan pendekatan sistematis.",
-                "Berdiskusi dengan orang lain yang memiliki sudut pandang berbeda untuk memperluas wawasan Anda."
+                "Turut andil menyuarakan pendapat saat sedang diskusi dengan komunitas."
             ]
         },
         // Rentang skor: 25 - 39
         TheCollaborator: {
-            image: 'images/maskot_kolaborator.png',
-            title: "Si Kolaborator Adaptif",
-            message: "Kamu adalah pribadi yang seimbang, mampu berkolaborasi dengan baik dan beradaptasi dengan berbagai situasi. Kamu menghargai kerja sama tim dan terbuka terhadap ide-ide baru. Potensimu besar untuk menjadi jembatan antar individu.",
+            image: 'images/Cici.png',
+            title: "Cici Si Visioner",
+            message: "Kamu adalah pribadi yang seimbang, mampu berkolaborasi dengan baik dan beradaptasi dengan berbagai situasi. Namun kamu lebih condong suka untuk bermimpi dan melakukan hal kreatif dibandingkan melakukan hal yang biasa-biasa saja dan tidak kreatif sama sekali",
             tips: "Terus kembangkan kemampuan komunikasi dan empati Anda. Jangan takut untuk mengambil peran kepemimpinan dalam proyek tim. Fleksibilitas adalah kunci, jadi teruslah belajar dan beradaptasi.",
             online: [
-                "Aktif dalam grup chat atau platform kolaborasi (Slack, Microsoft Teams) di lingkungan kerja atau proyek.",
-                "Ikuti webinar atau workshop online tentang soft skills seperti negosiasi atau manajemen konflik.",
-                "Terlibat dalam proyek open-source atau crowdsourcing untuk berkolaborasi dengan orang dari berbagai latar belakang."
+                "Bergabung ke dalam komunitas yang mendukung perkembangan ide kretif mu.",
+                "Mengasah ide-ide kreatif yang anda miliki tersebut dan mulai merealisasikannya di media sosial.",
+                "Membuat konten di media sosial yang dapat menjadi media untuk menyalurkan ide ide maupun hobi kreatif Anda."
             ],
             realLife: [
-                "Jadilah pendengar yang baik dalam percakapan sehari-hari.",
-                "Proaktif menawarkan bantuan atau ide dalam kegiatan kelompok.",
+                "Mulai menunjukkan hasil karya mu kepada orang-orang terdekatmu sebagai langkah awal agar mendapat dorongan dari mereka.",
+                "Mengasah ide-ide tersebut dengan bergabung dengan komunitas yang mendukung perkembangan karya mu.",
                 "Terbuka terhadap kritik membangun dan gunakan sebagai kesempatan untuk tumbuh."
             ]
         },
         // Rentang skor: 40 - 50
         TheInnovator: {
-            image: 'images/maskot_inovator.png',
-            title: "Kamal Si Strategis",
+            image: 'https://i.pinimg.com/736x/19/6b/70/196b709f8075ef70af676531373e2568.jpg',
+            title: "Rio Si Strategis",
             message: "Selamat! Kamu adalah pribadi yang sangat Adaptif dan Inovatif! Kamu memiliki pandangan ke depan, tidak takut mengambil risiko, dan selalu mencari cara baru untuk meningkatkan sesuatu. Semangatmu menular dan mendorong perubahan positif.",
             tips: "Jangan pernah berhenti berinovasi! Teruslah bertanya 'mengapa tidak?' dan 'bagaimana jika?'. Kelilingi dirimu dengan orang-orang yang juga berpikiran maju dan berani bermimpi besar.",
             online: [
-                "Eksplorasi tren teknologi terbaru dan platform inovasi (Product Hunt, Kickstarter).",
+                "Eksplorasi tren yang ada saat ini dan kemudian mengembangkan tren tersebut menjadi sebuah karya yang unik melalui pemikiran yang matang..",
                 "Ikuti kursus tentang desain berpikir (design thinking) atau kewirausahaan.",
                 "Mulai blog atau channel YouTube untuk berbagi ide-ide inovatif Anda."
             ],
             realLife: [
                 "Ambil inisiatif dalam proyek baru atau tantangan yang belum pernah dicoba.",
-                "Latih kemampuan memecahkan masalah dengan cara yang tidak konvensional.",
-                "Jaringan dengan para pemimpin industri atau inovator di bidang yang Anda minati."
+                "Mengikuti komunitas yang dapat mengasah kemampuan analisis serta ide-ide kreatif anda.",
+                "Mulai menyuarakan ide-ide inovatif mu itu dalam sebuah pertemuan dengan perhitungan analisis yang tepat."
             ]
         }
     };
