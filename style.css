@@ -84,7 +84,7 @@ p {
 
 /* Warna khusus untuk tombol CTA di landing page */
 .cta-button {
-    background-color: #ff5722; /* Warna tombol yang menarik perhatian */
+    background-color: #80ace6; /* Warna tombol yang menarik perhatian */
     padding: 15px 35px;
     font-size: 1.3em;
     font-weight: bold;
@@ -94,11 +94,11 @@ p {
 
 .start-button:hover, .submit-button:hover {
     /* Gaya saat tombol di-hover */
-    background-color: #218838; /* Warna hijau yang sedikit lebih gelap saat hover */
+    background-color: #106c17; /* Warna hijau yang sedikit lebih gelap saat hover */
 }
 
 .cta-button:hover {
-    background-color: #e64a19; /* Warna sedikit lebih gelap saat hover */
+    background-color: #000000; /* Warna sedikit lebih gelap saat hover */
     transform: translateY(-3px); /* Efek sedikit naik saat hover */
 }
 
@@ -141,7 +141,7 @@ p {
 }
 
 .text-content h1 {
-    color: #00796b; /* Warna judul yang berbeda */
+    color: #4a82b0; /* Warna judul yang berbeda */
     font-size: 2.8em;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -315,9 +315,9 @@ p {
 }
 
 .result-message {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
-    color: #007bff;
+    color: #6f9cf1;
     margin-bottom: 15px;
 }
 
