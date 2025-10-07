@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         // Rentang skor: 25 - 39
         TheCollaborator: {
-            image: 'images/Cici.png',
+            image: 'https://i.pinimg.com/736x/40/0a/d4/400ad4a32f8ff0d6187d17d2059d70cb.jpg',
             title: "Cici Si Visioner",
             message: "Kamu adalah pribadi yang seimbang, mampu berkolaborasi dengan baik dan beradaptasi dengan berbagai situasi. Namun kamu lebih condong suka untuk bermimpi dan melakukan hal kreatif dibandingkan melakukan hal yang biasa-biasa saja dan tidak kreatif sama sekali",
             tips: "Terus kembangkan kemampuan komunikasi dan empati Anda. Jangan takut untuk mengambil peran kepemimpinan dalam proyek tim. Fleksibilitas adalah kunci, jadi teruslah belajar dan beradaptasi.",
