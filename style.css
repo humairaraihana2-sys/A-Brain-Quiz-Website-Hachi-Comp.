@@ -1,6 +1,6 @@
  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: #abd9ef; 
+    background-color: #a5d5eb; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
@@ -9,6 +9,8 @@
     color: #1e4291; 
     padding: 20px; 
     box-sizing: border-box; 
+    /* Transisi untuk Tombol Smooth */
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .container {
@@ -339,4 +341,109 @@ p {
 
 .result-application li {
     margin-bottom: 5px; /* Jarak antar item daftar */
+}
+/* === 1. ANIMASI FADE-IN (Kunci Tampilan Smooth) === */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-element {
+    opacity: 0; /* Mulai tersembunyi */
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* Container Utama */
+.container.landing-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0; 
+}
+
+.text-content {
+    flex: 1.5; 
+}
+
+/* Wadah Gambar dan CTA */
+.image-and-cta {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Membuat Gambar Proporsional di Desktop */
+.image-content {
+    max-width: 350px; 
+    width: 100%;
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+}
+
+.image-content img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek Tambahan: Gambar sedikit bergerak saat disentuh/kursor di atasnya */
+.image-content:hover {
+    transform: scale(1.03); 
+}
+
+.cta-button:hover {
+    background-color: #4680be;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+}
+
+
+/* === KUNCI RESPONSIVITAS HP (Membuat Gambar Kecil dan Rapi) === */
+@media (max-width: 768px) {
+    
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 10px;
+        border-radius: 0; 
+        box-shadow: none;
+    }
+
+     /* KUNCI: Teks akan muncul pertama (Order 1) */
+    .text-content {
+        /* PENTING: Mengatur order 1 */
+        order: 1; 
+        padding: 0 10px;
+    }
+
+    /* KUNCI: Gambar dan Tombol akan muncul di paling bawah (Order 2) */
+    .image-and-cta {
+        /* PENTING: Mengatur order 2 */
+        order: 2; 
+        width: 100%;
+        margin-top: 30px; /* Jarak antara teks dan gambar */
+        margin-bottom: 0;
+    }
+
+    /* KUNCI: Membuat Gambar Kecil dan Pas di HP */
+    .image-content {
+        /* Batasi lebar gambar hanya sekitar 55% - 65% dari lebar HP agar terlihat kecil, tidak aneh, dan proporsional */
+        max-width: 60%; 
+        margin: 0 auto 20px auto; 
+    }
+
+    .image-content img {
+        width: 100%; 
+    }
+    
+    .cta-button {
+        max-width: 80%;
+    }
 }
